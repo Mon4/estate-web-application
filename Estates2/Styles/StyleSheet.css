@@ -1,0 +1,81 @@
+﻿.logo {
+    height: 50px;
+    width: 100px;
+}
+
+.jumbotron {
+    height: 70vh;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#leftdiv {
+    display: flex;
+    flex: 45%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#logobg {
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    height: 30%;
+    width: 60%;
+    border-radius: 5px;
+}
+
+#logobig {
+    height: 100%;
+    width: 100%;
+}
+
+
+#rightdiv {
+    flex: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+#estateimg {
+    width: 80%;
+    border-radius: 25px;
+}
+
+#diagram {
+    width: 80%;
+    border-radius: 25px;
+}
+
+#estateimg:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+
+.emptydiv{
+    height: 68vh;
+}
+
+.indexButton {
+    background-color: antiquewhite;
+    font-size: 15px;
+}
+
+.box{
+    background-color: antiquewhite;
+    width: 100px;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.whitebox {
+    background-color: antiquewhite;
+    padding: 5%;
+}
+

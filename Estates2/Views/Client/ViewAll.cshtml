@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Estates2.ViewModels.ClientVM>
+
+@{
+    ViewBag.Title = "List of clients";
+}
+
+<h2>List of clients</h2>
+
+<p>
+    <button class="btn btn-info" type="button" onclick="location.href='@Url.Action("Create", "Client")'">Add new</button>
+</p>
+<table class="table table-striped">
+    <thead thead-light>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOfBirth)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "View", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "deleteButton" })
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>

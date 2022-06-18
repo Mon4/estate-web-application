@@ -1,0 +1,27 @@
+﻿<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @*@Html.ActionLink("Estates Agency", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <a href="https://localhost:44315/"><img class="logo" src="https://i.imgur.com/iv9xIOW.png/" alt="" /></a>*@
+            <a href='@Url.Action("Index", "Home")'>
+                <img class="logo" src="https://i.imgur.com/iv9xIOW.png/" />
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+                
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Client", "Index", "Client")</li>
+                <li>@Html.ActionLink("Employee", "Index", "Employee")</li>
+                <li>@Html.ActionLink("Estate", "Index", "Estate")</li>
+                <li>@Html.ActionLink("Meeting", "Index", "Meeting")</li>
+                <li>@Html.ActionLink("Owner", "Index", "Owner")</li>
+            </ul>
+        </div>
+    </div>
+</div>

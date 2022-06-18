@@ -1,0 +1,48 @@
+﻿@model Estates2.ViewModels.EmployeeVM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details of employee</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Salary)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <button class="btn btn-info" type="button" onclick="location.href='@Url.Action("Edit", "Employee", new {id=Model.Id})'">Edit</button>
+    <button class="btn btn-success" type="button" onclick="location.href='@Url.Action("ViewAll", "Employee")'">Back to list</button>
+</p>

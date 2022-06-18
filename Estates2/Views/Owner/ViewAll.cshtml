@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Estates2.ViewModels.OwnerVM>
+
+@{
+    ViewBag.Title = "List of owners";
+}
+
+<h2>List of owners</h2>
+
+<p>
+    <button class="btn btn-info" type="button" onclick="location.href='@Url.Action("Create", "Owner")'">Add new</button>
+</p>
+<table class="table table-striped">
+    <thead thead-dark>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ZipCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Adress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ZipCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "View", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id}, new { @class = "deleteButton" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

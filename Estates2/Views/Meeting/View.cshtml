@@ -1,0 +1,49 @@
+﻿@model Estates2.ViewModels.MeetingVM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details of meeting</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MeetingDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MeetingDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstateVM.Adress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstateVM.Adress)
+        </dd>
+
+        <dt>
+            Client
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientVM.Name)
+            @Html.DisplayFor(model => model.ClientVM.Surname)
+        </dd>
+
+        <dt>
+            Employee
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeVM.Name)
+            @Html.DisplayFor(model => model.EmployeeVM.Surname)
+        </dd>
+    </dl>
+</div>
+<p>
+    <button class="btn btn-info" type="button" onclick="location.href='@Url.Action("Edit", "Meeting", new {id=Model.Id})'">Edit</button>
+    <button class="btn btn-success" type="button" onclick="location.href='@Url.Action("ViewAll", "Meeting")'">Back to list</button>
+</p>

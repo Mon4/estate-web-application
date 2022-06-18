@@ -1,0 +1,97 @@
+﻿@model IEnumerable<Estates2.ViewModels.EstateVM>
+
+@{
+    ViewBag.Title = "List of estates";
+}
+
+<h2>List of estates</h2>
+
+<p>
+    <button class="btn btn-info" type="button" onclick="location.href='@Url.Action("Create", "Client")'">Add new</button>
+</p>
+<table class="table table-striped">
+    <thead thead-light>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Adress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ZipCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Area)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Furniture)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Balcony)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomsNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bedrooms)
+            </th>
+            <th>
+                Owner
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Adress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ZipCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Area)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Furniture)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Balcony)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RoomsNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bedrooms)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OwnerVM.Name)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "menuButton" }) |
+                    @Html.ActionLink("Details", "View", new { id = item.Id }, new { @class = "menuButton" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "deleteButton" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
