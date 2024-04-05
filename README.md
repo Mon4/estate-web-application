@@ -1,5 +1,6 @@
 # real estate agency website
-This project is a website with a database. It was created in C# with using MVC model.
+This project is a website with a database. This is a continuation of the [real estate agency](https://github.com/Mon4/c-sharp-estate-agency) window app project.
+This one was created in C# with using MVC model.
 
 ![starting](https://github.com/Mon4/estate-web-application/assets/44522588/c902d95d-65b0-46f2-bb98-cf8d8790e877)
 
